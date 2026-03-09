@@ -11,7 +11,7 @@
       --ink: #12100e;
       --bg: #f7f4ef;
       --cream: #ede9e1;
-      --accent: #1a5c4e;
+      --accent: #770cad;
       --accent-light: #e8f1ef;
       --rule: #c8c0b4;
       --muted: #7a726a;
@@ -230,6 +230,68 @@
       border-radius: 50%; background: var(--accent);
     }
 
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1.4rem 1.5rem 1.25rem;
+      display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(26,92,78,0.08);
+    }
+    .project-type {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .project-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem; line-height: 1.25;
+      margin-bottom: 0.55rem;
+    }
+    .project-card p {
+      font-size: 0.84rem; color: var(--muted);
+      line-height: 1.55; flex: 1; margin-bottom: 1rem;
+    }
+    .project-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .project-tag {
+      font-size: 0.72rem; font-weight: 500;
+      background: rgba(26,92,78,0.09);
+      color: var(--accent); border-radius: 100px;
+      padding: 0.15rem 0.6rem; letter-spacing: 0.02em;
+    }
+    .project-link-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border: 1px solid var(--rule); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .project-card:hover .project-link-icon {
+      background: var(--accent); border-color: var(--accent);
+    }
+    .project-link-icon svg {
+      width: 12px; height: 12px;
+      stroke: var(--muted); fill: none; stroke-width: 2.2;
+      transition: stroke 0.2s;
+    }
+    .project-card:hover .project-link-icon svg { stroke: #fff; }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--rule);
@@ -261,10 +323,10 @@
   <span class="nav-name">Joshua R. Stovall</span>
   <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#competencies">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="ExcelPasswordPost.html">Linked Example Post</a></li>
   </ul>
 </nav>
 
@@ -275,9 +337,9 @@
     Experienced Data Manager with 10+ years building data architecture and governance solutions for workforce development organizations. Skilled in ETL pipelines, visualization, and translating complex data into actionable insights.
   </p>
   <div class="contact-row" id="contact">
-    <a class="contact-pill" href="mailto:stovall.joshua@gmail.com">
+    <a class="contact-pill" href="/cdn-cgi/l/email-protection#2556514a534449490b4f4a564d5044654248444c490b464a48">
       <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-      stovall.joshua@gmail.com
+      <span class="__cf_email__" data-cfemail="6d1e19021b0c01014307021e05180c2d0a000c0401430e0200">[email&#160;protected]</span>
     </a>
     <a class="contact-pill" href="tel:+18063404706">
       <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.8.4 1.6.7 2.4a2 2 0 01-.4 2.1L8.1 9.4a16 16 0 006.4 6.4l1.3-1.3a2 2 0 012.1-.4c.8.3 1.6.5 2.4.7A2 2 0 0122 16.9z"/></svg>
@@ -386,6 +448,96 @@
     </div>
   </section>
 
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <span class="section-label">Recent Projects</span>
+    <div class="project-grid">
+
+      <a class="project-card fade-in" href="DisconnectedYoungAdults.html" target="_blank">
+        <div class="project-type">Research Report</div>
+        <h3>Disconnected Young Adults in Pierce County</h3>
+        <p>An interactive web report examining the 14,000+ young people in Pierce County not in work or school — geographic concentration, demographic analysis, and policy implications.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Data Viz</span>
+            <span class="project-tag">Datawrapper</span>
+            <span class="project-tag">Labor Market</span>
+          </div>
+          <div class="project-link-icon">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card fade-in" href="ExcelPasswordPost.html" target="_blank">
+        <div class="project-type">How-To Article</div>
+        <h3>Unlocking Excel Password Protection</h3>
+        <p>A step-by-step technical explainer on recovering access to password-protected Excel workbooks — written for a practitioner audience managing legacy data files.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Data Mgmt</span>
+            <span class="project-tag">Technical Writing</span>
+          </div>
+          <div class="project-link-icon">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card fade-in" href="#" target="_blank">
+        <div class="project-type">Dashboard</div>
+        <h3>Program Performance Dashboard</h3>
+        <p>Real-time Power BI dashboard connecting contract data, invoices, and outcomes to support proactive decision-making across workforce programs.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">ETL</span>
+            <span class="project-tag">Workforce</span>
+          </div>
+          <div class="project-link-icon">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card fade-in" href="#" target="_blank">
+        <div class="project-type">Dashboard</div>
+        <h3>Consumer Price Index Dashboard</h3>
+        <p>Live Power BI dashboard pulling CPI data directly from a public API via Power Query, enabling dynamic inflation tracking and cost-of-living analysis for regional economic research.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">API</span>
+            <span class="project-tag">Power Query</span>
+          </div>
+          <div class="project-link-icon">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card fade-in" href="#" target="_blank">
+        <div class="project-type">Automation</div>
+        <h3>Automating Data Pipeline &amp; Reporting</h3>
+        <p>End-to-end automated reporting workflow using TypeScript and Power Automate to process data, generate Datawrapper visualizations, and publish finished reports directly to WordPress.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Power Automate</span>
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Datawrapper</span>
+          </div>
+          <div class="project-link-icon">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
   <!-- COMPETENCIES -->
   <section id="competencies">
     <span class="section-label">Core Competencies</span>
@@ -469,10 +621,10 @@
 </main>
 
 <footer>
-  Joshua R. Stovall &middot; Tacoma, WA &middot; <a href="mailto:stovall.joshua@gmail.com">stovall.joshua@gmail.com</a>
+  Joshua R. Stovall &middot; Tacoma, WA &middot; <a href="/cdn-cgi/l/email-protection#5c2f28332a3d30307236332f34293d1c3b313d3530723f3331"><span class="__cf_email__" data-cfemail="3142455e47505d5d1f5b5e4259445071565c50585d1f525e5c">[email&#160;protected]</span></a>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function toggleJob(btn) {
     var bullets = btn.nextElementSibling;
     var isOpen = bullets.classList.contains('open');
@@ -494,17 +646,13 @@
     URL.revokeObjectURL(url);
   }
 
-  var observer = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.12 });
 
-  document.querySelectorAll('.fade-in').forEach(function(el, i) {
-    el.style.transitionDelay = (i % 4 * 60) + 'ms';
+  document.querySelectorAll('.fade-in').forEach(function(el) {
     observer.observe(el);
   });
 </script>
